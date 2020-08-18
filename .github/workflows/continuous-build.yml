@@ -45,21 +45,21 @@ jobs:
     - name: Font Bakery CI testing [INSTANCE TTF]
       uses: f-actions/font-bakery@v1
       with:
-        subcmd: "check-notofonts"
+        subcmd: "check-profile '$GITHUB_WORKSPACE'/noto-build/third_party/check-alwayspass.py"
         args: "-x monospace -x fontbakery_version -x dsig --loglevel WARN"  # optional additional args to subcmd
         path: "main/fonts/ttf/unhinted/instance_ttf/*.ttf"
         version: "latest"  # optional, latest PyPI release is default
     - name: Font Bakery CI testing [INSTANCE OTF]
       uses: f-actions/font-bakery@v1
       with:
-        subcmd: "check-notofonts"
+        subcmd: "check-profile '$GITHUB_WORKSPACE'/noto-build/third_party/check-alwayspass.py"
         args: "-x monospace -x fontbakery_version -x dsig --loglevel WARN"  # optional additional args to subcmd
         path: "main/fonts/otf/unhinted/instance_otf/*.otf"
         version: "latest"  # optional, latest PyPI release is default
     - name: Font Bakery CI testing [VARIABLE TTF]
       uses: f-actions/font-bakery@v1
       with:
-        subcmd: "check-notofonts"
+        subcmd: "check-profile '$GITHUB_WORKSPACE'/noto-build/third_party/check-alwayspass.py"
         args: "-x monospace -x fontbakery_version -x dsig --loglevel WARN"  # optional additional args to subcmd
         path: "main/fonts/ttf/unhinted/variable_ttf/*.ttf"
         version: "latest"  # optional, latest PyPI release is default
